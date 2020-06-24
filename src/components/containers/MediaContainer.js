@@ -52,9 +52,7 @@ class MediaContainer extends Component {
             this.setState({
                 mediaType,
                 message: 'Please initialize the search',
-                mediaList: [],
-                searchQuery: '',
-                searchType: 'multi'
+                mediaList: []
             })
         }
     }
@@ -72,6 +70,7 @@ class MediaContainer extends Component {
             mediaList => {
 
                 this.setState({
+                    mediaType,
                     mediaList,
                     isLoading: false,
                 })
@@ -136,7 +135,7 @@ class MediaContainer extends Component {
 
     render() {
 
-        const { isLoading, message, mediaList } = this.state;
+        const { isLoading, mediaType, message, mediaList } = this.state;
 
         return (
             <div>
@@ -149,7 +148,8 @@ class MediaContainer extends Component {
                     searchTabMessage={message}
                     onFilterChange={this.handleInputFilterChange}
                     onMediaTypeChange={this.handleMediaTypeChange}
-                    mediaList={mediaList} />
+                    mediaList={mediaList} 
+                    isSearchType = {(mediaType === "search")}/>
             </div>
         )
     }

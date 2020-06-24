@@ -39,6 +39,8 @@ const MediaTabs = props => {
         }
     };
 
+
+
     const handleChangeIndex = (index) => {
         setValue(index);
     };
@@ -48,8 +50,13 @@ const MediaTabs = props => {
         props.onFilterChange(value)
     };
 
-    const { isLoading, searchTabMessage, mediaList } = props;
+    const { isLoading, searchTabMessage, mediaList, isSearchType } = props;
 
+    if (isSearchType) {
+        if (value != 1) {
+            setValue(1)
+        }
+    }
     return (
         <div className={classes.root}>
 
@@ -66,7 +73,7 @@ const MediaTabs = props => {
                     <Tab label="TV Series" id="full-width-tab-2" aria-controls="full-width-tabpanel-2" />
                 </Tabs>
             </AppBar>
-            
+
             <SwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
