@@ -1,0 +1,46 @@
+body {
+    background: #ffffff;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.App-header {
+    text-align: center;
+    border: 0.5em solid #08061d;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.searchMessage {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.media-list-container {
+    padding: 3rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #dfdfdf;
+}
+
+.media-list {
+    width: 100%;
+}
+
+
+.media-image {
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 350px;
+    margin: 1rem;
+    background-position: left;
+    background-size: cover;
+}
